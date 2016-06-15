@@ -4,52 +4,74 @@
 \alias{p.QFASA}
 \title{Computes the diet estimate for each predator in seal.mat using
 either the Kullback-Leibler Distance (KL), the Aitchison Distance
-(AIT) or the Chi-Squared Distance (CS).}
+(AIT) or the Chi-Square Distance (CS).}
 \usage{
 p.QFASA(seal.mat, prey.mat, cal.mat, dist.meas, gamma, FC = rep(1,
   nrow(prey.mat)), start.val = rep(0.99999, nrow(prey.mat)), ext.fa)
 }
 \arguments{
-\item{seal.mat}{matrix containing the FA signatures of the predator}
+\item{seal.mat}{matrix containing the FA signatures of the predators.}
 
 \item{prey.mat}{matrix containing a representative FA signature
-from each prey group (usually the mean) -> assumes that the
-first column contains the name of the prey group}
+from each prey group (usually the mean). The first column must
+index the prey group.}
 
-\item{cal.mat}{matrix of calibration factors where the *i* th
-column is to be used with the *i* th seal}
+\item{cal.mat}{matrix of calibration factors where the \emph{i} th
+column is to be used with the \emph{i} th seal}
 
 \item{dist.meas}{distance measure to use for estimation: 1=KL,
 2=AIT or 3=CS}
 
 \item{gamma}{parameter required for calculations using CS distance
-(passed to CS.obj). Currently being set to =1.}
+(passed to CS.obj). Currently being set to 1.}
 
-\item{FC}{TODO}
+\item{FC}{vector of fat content}
 
-\item{start.val}{TODO}
+\item{start.val}{initial vector of parameters to be optimized}
 
-\item{ext.fa}{TODO}
+\item{ext.fa}{subset of FA's to be used to obtain QFASA diet estimates.}
 }
 \description{
 Computes the diet estimate for each predator in seal.mat using
 either the Kullback-Leibler Distance (KL), the Aitchison Distance
-(AIT) or the Chi-Squared Distance (CS).
+(AIT) or the Chi-Square Distance (CS).
 }
 \examples{
-# predators
-predators.n <- 10
-fa.n <- 3
-predators <- gtools::rdirichlet(predators.n, alpha=rep(1, fa.n))*100
+ ## Fatty Acids
+ data(FAset)
+ fa.set = as.vector(unlist(FAset))
+ 
+ ## Predators
+ data(predatorFAs)
+ tombstone.info = predatorFAs[,1:4]
+ predator.matrix = predatorFAs[,5:(ncol(predatorFAs))]
+ npredators = nrow(predator.matrix)
 
-# prey
-prey.n <- 4
-prey <- gtools::rdirichlet(prey.n, alpha=rep(1, fa.n))
+ ## Prey
+ data(preyFAs)
+ prey.sub=(preyFAs[,4:(ncol(preyFAs))])[fa.set]
+ prey.sub=prey.sub/apply(prey.sub,1,sum) 
+ group=as.vector(preyFAs$Species)
+ prey.matrix=cbind(group,prey.sub)
+ prey.matrix=MEANmeth(prey.matrix) 
 
-# calibration coefficients
-cal <- matrix(rep(gtools::rdirichlet(1, alpha=rep(1, fa.n)), predators.n), fa.n, predators.n)
-# Run QFASA
-QFASA::p.QFASA(predators, prey, cal, dist.meas = 1)
+ FC = preyFAs[,c(2,3)] 
+ FC = as.vector(tapply(FC$lipid,FC$Species,mean,na.rm=TRUE))
 
+ ## Calibration Coefficients
+ data(CC)
+ cal.vec = CC[,2]
+ cal.mat = replicate(npredators, cal.vec)
+
+ # Run QFASA
+ Q = p.QFASA(predator.matrix,
+             prey.matrix,
+             cal.mat,
+             dist.meas=1, 
+             gamma=1,
+             FC,
+             start.val = rep(1,nrow(prey.matrix)),
+             fa.set)
+ 
 }
 

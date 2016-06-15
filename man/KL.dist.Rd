@@ -2,19 +2,23 @@
 % Please edit documentation in R/qfasa.R
 \name{KL.dist}
 \alias{KL.dist}
-\title{Similar to KL but requires two vectors as input.}
+\title{Returns the distance between two compositional vectors using Kullback-Leibler
+distance measure.}
 \usage{
-KL.dist(x, y)
+KL.dist(x.1, x.2)
 }
 \arguments{
-\item{x}{vector}
+\item{x.1}{compositional vector}
 
-\item{y}{vector}
-}
-\value{
-Kulback-Liebler distance between x and y.
+\item{x.2}{compositional vector}
 }
 \description{
-Similar to KL but requires two vectors as input.
+Returns the distance between two compositional vectors using Kullback-Leibler
+distance measure.
+}
+\references{
+S.J. Iverson, C. Field, W.D. Bowen, and W. Blanchard (2004)  Quantitative
+fatty acid signature analysis: A new method of estimating predator diets, Ecological
+Monographs 72, pp. 211-235.
 }
 

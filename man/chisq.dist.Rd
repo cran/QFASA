@@ -2,22 +2,25 @@
 % Please edit documentation in R/qfasa.R
 \name{chisq.dist}
 \alias{chisq.dist}
-\title{Calculates CS distance as described in testing for diff in diet paper.
-This is different to chisq.ca in directory run.oct11.r.1 because
-x1 and x2 are not assumed to be transformed.}
+\title{Returns the distance between two compositional vectors using the chi-square distance.}
 \usage{
-chisq.dist(x.1, x.2, alpha)
+chisq.dist(x.1, x.2, gamma)
 }
 \arguments{
-\item{x.1}{vector}
+\item{x.1}{compositional vector}
 
-\item{x.2}{vector}
+\item{x.2}{compositional vector}
 
-\item{alpha}{TODO}
+\item{gamma}{power transform taken to be 1.}
 }
 \description{
-Calculates CS distance as described in testing for diff in diet paper.
-This is different to chisq.ca in directory run.oct11.r.1 because
-x1 and x2 are not assumed to be transformed.
+Returns the distance between two compositional vectors using the chi-square distance.
+}
+\references{
+Stewart, C., Iverson, S. and Field, C. (2014) Testing for a change in
+diet using fatty acid signatures.  Environmental and Ecological Statistics 21, pp. 775-792.
+
+Stewart, C. (2016) An approach to measure distance between compositional
+diet estimates containing essential zeros.  Journal of Applied Statistics, 10.1080/02664763.2016.119384.
 }
 

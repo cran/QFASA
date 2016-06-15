@@ -2,21 +2,22 @@
 % Please edit documentation in R/qfasa.R
 \name{KL.obj}
 \alias{KL.obj}
-\title{The objective function to be minimized by code{solnp()}. Similar to
-optquantile.obj2 but does not normalize alpha.}
+\title{Used in \code{solnp()} as the objective function to be minimized when
+Kullback-Leibler distance measure is chosen.}
 \usage{
 KL.obj(alpha, seal, prey.quantiles)
 }
 \arguments{
 \item{alpha}{vector over which minimization takes place.}
 
-\item{seal}{vector of fatty acid compositions of seal.}
+\item{seal}{fatty acid signature of predator.}
 
-\item{prey.quantiles}{matrix of fatty acid composition of
-prey. Each row contains an individual prey from a different species.}
+\item{prey.quantiles}{matrix of fatty acid signatures of
+prey. Each row contains an individual prey signature from a different
+species.}
 }
 \description{
-The objective function to be minimized by code{solnp()}. Similar to
-optquantile.obj2 but does not normalize alpha.
+Used in \code{solnp()} as the objective function to be minimized when
+Kullback-Leibler distance measure is chosen.
 }
 

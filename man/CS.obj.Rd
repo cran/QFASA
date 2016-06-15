@@ -2,24 +2,26 @@
 % Please edit documentation in R/qfasa.R
 \name{CS.obj}
 \alias{CS.obj}
-\title{Similar to AIT.obj and KL.obj but does not require changing zeros.
-Used in \code{solnp()} as the objective function to be minimized.}
+\title{Used in \code{solnp()} as the objective function to be minimized when
+chi-square distance measure is chosen. Unlike AIT.obj and KL.obj, does
+not require modifying zeros.}
 \usage{
 CS.obj(alpha, seal, prey.quantiles, gamma)
 }
 \arguments{
 \item{alpha}{vector over which minimization takes place.}
 
-\item{seal}{vector of  fatty acid compositions of seal.}
+\item{seal}{fatty acid signature of predator.}
 
-\item{prey.quantiles}{matrix of fatty acid composition of
-prey. Each row contains an individual prey from a different
+\item{prey.quantiles}{matrix of fatty acid signatures of
+prey. Each row contains an individual prey signature from a different
 species.}
 
-\item{gamma}{parameter passed to chisq.dist}
+\item{gamma}{power transform exponent (see chisq.dist).}
 }
 \description{
-Similar to AIT.obj and KL.obj but does not require changing zeros.
-Used in \code{solnp()} as the objective function to be minimized.
+Used in \code{solnp()} as the objective function to be minimized when
+chi-square distance measure is chosen. Unlike AIT.obj and KL.obj, does
+not require modifying zeros.
 }
 

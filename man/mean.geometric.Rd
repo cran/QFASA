@@ -2,14 +2,14 @@
 % Please edit documentation in R/qfasa.R
 \name{mean.geometric}
 \alias{mean.geometric}
-\title{Returns the geometric mean.}
+\title{Returns the geometric mean of a compositional vector}
 \usage{
 \method{mean}{geometric}(x)
 }
 \arguments{
-\item{x}{vector}
+\item{x}{compositional vector}
 }
 \description{
-Returns the geometric mean.
+Returns the geometric mean of a compositional vector
 }
 

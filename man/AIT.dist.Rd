@@ -2,22 +2,22 @@
 % Please edit documentation in R/qfasa.R
 \name{AIT.dist}
 \alias{AIT.dist}
-\title{Computes the difference between to vectors of compositional data
-as described in aitchison (1992) "measures of compositional difference".
-Note that this function is different to \code{compdiff()} in that it takes square root.
-\code{compdiff()} is used in calculating diet estimates.}
+\title{Returns the distance between two compositional vectors using Aitchison's distance measure.}
 \usage{
-AIT.dist(x, bigX)
+AIT.dist(x.1, x.2)
 }
 \arguments{
-\item{x}{TODO}
+\item{x.1}{compositional vector}
 
-\item{bigX}{TODO}
+\item{x.2}{compositional vector}
 }
 \description{
-Computes the difference between to vectors of compositional data
-as described in aitchison (1992) "measures of compositional difference".
-Note that this function is different to \code{compdiff()} in that it takes square root.
-\code{compdiff()} is used in calculating diet estimates.
+Returns the distance between two compositional vectors using Aitchison's distance measure.
+}
+\references{
+Aitchison, J., (1992) On criteria for measures of compositional difference. Mathematical Geology, 24(4), pp.365-379.
+
+Stewart, C. (2016) An approach to measure distance between compositional diet estimates containing essential
+    zeros. Journal of Applied Statistics, 10.1080/02664763.2016.119384.
 }
 

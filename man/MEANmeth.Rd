@@ -3,8 +3,8 @@
 \name{MEANmeth}
 \alias{MEANmeth}
 \title{Returns the multivariate mean FA signature of each prey group
-entered into the model. Result can be passed to prey.mat in
-\code{qfasa()}.}
+entered into the QFASA model. Result can be passed to prey.mat in
+\code{p.QFASA()}.}
 \usage{
 MEANmeth(prey.mat)
 }
@@ -14,7 +14,7 @@ prey. The first column indexes the prey group.}
 }
 \description{
 Returns the multivariate mean FA signature of each prey group
-entered into the model. Result can be passed to prey.mat in
-\code{qfasa()}.
+entered into the QFASA model. Result can be passed to prey.mat in
+\code{p.QFASA()}.
 }
 

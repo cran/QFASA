@@ -2,28 +2,26 @@
 % Please edit documentation in R/qfasa.R
 \name{CS.more}
 \alias{CS.more}
-\title{Used to provide additional information on model components when
-alpha corresponds to the QFASA diet estimates (i.e. estimates
-that minimized the cs distance). Used in \code{solnp()} as the
-objective function to be minimized.}
+\title{Used to provide additional information on various model components
+evaluated at the optimal solution i.e. using the QFASA diet estimates and
+chi-square distance measure.}
 \usage{
 CS.more(alpha, seal, prey.quantiles, gamma)
 }
 \arguments{
-\item{alpha}{vector over which minimization takes place.}
+\item{alpha}{compositional QFASA diet estimate.}
 
-\item{seal}{vector of  fatty acid compositions of seal.}
+\item{seal}{fatty acid signature of predator.}
 
-\item{prey.quantiles}{matrix of fatty acid composition of
-prey. Each row contains an individual prey from a different
+\item{prey.quantiles}{matrix of fatty acid signatures of
+prey. Each row contains an individual prey signature from a different
 species.}
 
-\item{gamma}{parameter passed to chisq.dist}
+\item{gamma}{power transform exponent (see chisq.dist).}
 }
 \description{
-Used to provide additional information on model components when
-alpha corresponds to the QFASA diet estimates (i.e. estimates
-that minimized the cs distance). Used in \code{solnp()} as the
-objective function to be minimized.
+Used to provide additional information on various model components
+evaluated at the optimal solution i.e. using the QFASA diet estimates and
+chi-square distance measure.
 }
 
