@@ -1,13 +1,13 @@
-fd0f86078986ec8750fe67092b3fbbf3 *DESCRIPTION
+08060d9fdb3aede5e4f29eb5bbdac894 *DESCRIPTION
 87b6a542739e2c41e1a7fa46f9527136 *LICENSE
 516a74f68c136c94582c14081728e461 *NAMESPACE
-460f38a6890db01fdc12d3e53c4bf1a6 *NEWS.md
+024cc683679f0bd1c19f994a90a0308f *NEWS.md
 74c3edf7ae4e74b3a9ede2bebd650073 *R/CC.R
 b57444284e9488e767e5381cf80213e7 *R/FAset.R
 ca1bbc3de10155c917493a3cfd7f535c *R/predatorFAs.R
 f5f09ae442524c481f9e69ab1e0b7d11 *R/preyFAs.R
-0d7da7c0c44ac19309d00e160cdbb844 *R/qfasa.R
-3160340ea18ed897a44d9082746196a5 *README.md
+475dbc7da23aeb73cf6d38c88a6b9911 *R/qfasa.R
+392907070117aa0e988c3705a7104cce *README.md
 49b9e5e96b2e397b03f813e00caa9d6d *build/vignette.rds
 4c24d07d4d7bf7c97d687a23c4f7c4b0 *data/CC.rda
 ce90edf77afe5a820c51191e23b1ca39 *data/FAset.rda
@@ -16,7 +16,7 @@ a5578e5ef09791774422b55fa2d2de9f *data/predatorFAs.rda
 79910238b3613c36edb1ca7435d76781 *inst/CITATION
 b23342bd9b8ac2321f47f74e55c5b298 *inst/doc/ModelingWorkflow.R
 7850c8a07fc71b115e64a2eb569f7e7f *inst/doc/ModelingWorkflow.Rmd
-1d99c97efc170e54be27e1bdc896687d *inst/doc/ModelingWorkflow.html
+b899cdaddeee799bd6dd2bd37c8c8975 *inst/doc/ModelingWorkflow.html
 e706c56b04610d62f54b46bcb58c7d22 *inst/exdata/AdditionalMeasuresAIT.csv
 834512e89c212a8397d085033c129bdf *inst/exdata/AdditionalMeasuresCS.csv
 d5fe68682a96985b6f33c16e25a96f77 *inst/exdata/AdditionalMeasuresKL.csv
@@ -45,6 +45,7 @@ e026212e59a113af9483be416c1c57a2 *man/preyFAs.Rd
 db7169153904a4db5f10a900b9ab431c *tests/testthat.R
 2cb3b6b86d1fcae07c815faff54cf98b *tests/testthat/testAIT.R
 3b1eceaa650f7da96f0489613484be3b *tests/testthat/testGeometricMean.R
+5e905808c5eb265185dc07b6ce299b31 *tests/testthat/testMatrixDimensions.R
 02518a9e5380e8ac35bc986bc2ddc151 *tests/testthat/testModelWorkflowAIT.R
 f2079455beb69a8ac77d93f9101e6923 *tests/testthat/testModelWorkflowCS.R
 99ca4813b02df333737d003132cd2921 *tests/testthat/testModelWorkflowKL.R
