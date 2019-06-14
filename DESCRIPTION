@@ -1,6 +1,7 @@
 Package: QFASA
 Title: Quantitative Fatty Acid Signature Analysis
-Version: 1.0.2
+Version: 1.0.3
+Date: 2019-06-12
 Authors@R: c(
              person("Sara", "Iverson", email = "Sara.Iverson@dal.ca", role = c("aut")),
              person("Chris", "Field", email = "field@mathstat.dal.ca", role = c("aut")),
@@ -8,7 +9,8 @@ Authors@R: c(
              person("Wade", "Blanchard", email = "wade.blanchard@anu.edu.au", role = c("aut")),
              person("Connie", "Stewart", email = "connie.stewart@unb.ca", role = c("aut", "cph")),
              person("Shelley", "Lang", email = "shelley.lang@dfo-mpo.gc.ca", role = c("aut")),
-             person("Justin", "Kamerman", email = "justin.kamerman@unb.ca", role = c("cre", "cph")))
+             person("Justin", "Kamerman", email = "justin@kaleco.net", role = c("cre", "cph")),
+             person("Hongchang", "Bao", email = "hbao@unb.ca", role = c("ctb")))
 Description: Accurate estimates of the diets of predators are required
     in many areas of ecology, but for many species current methods are
     imprecise, limited to the last meal, and often biased. The diversity
@@ -21,19 +23,22 @@ Depends: R (>= 3.2)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: Rsolnp, grid
-RoxygenNote: 5.0.1
+Imports: stats, Rsolnp, boot, futile.logger, gamlss, gamlss.dist
+RoxygenNote: 6.1.0
 VignetteBuilder: rmarkdown, knitr
 Suggests: knitr, rmarkdown, testthat, plyr, gtools
+BugReports: https://github.com/justinkamerman/QFASA/issues
+URL: https://CRAN.R-project.org/package=QFASA
 NeedsCompilation: no
-Packaged: 2016-10-29 09:46:29 UTC; jkamerman
+Packaged: 2019-06-14 16:56:41 UTC; justin
 Author: Sara Iverson [aut],
   Chris Field [aut],
   Don Bowen [aut],
   Wade Blanchard [aut],
   Connie Stewart [aut, cph],
   Shelley Lang [aut],
-  Justin Kamerman [cre, cph]
-Maintainer: Justin Kamerman <justin.kamerman@unb.ca>
+  Justin Kamerman [cre, cph],
+  Hongchang Bao [ctb]
+Maintainer: Justin Kamerman <justin@kaleco.net>
 Repository: CRAN
-Date/Publication: 2016-10-29 13:06:30
+Date/Publication: 2019-06-14 17:20:05 UTC

@@ -3,14 +3,14 @@
 \name{KL.obj}
 \alias{KL.obj}
 \title{Used in \code{solnp()} as the objective function to be minimized when
-Kullback-Leibler distance measure is chosen.}
+Kullback--Leibler distance measure is chosen.}
 \usage{
-KL.obj(alpha, seal, prey.quantiles)
+KL.obj(alpha, predator, prey.quantiles)
 }
 \arguments{
 \item{alpha}{vector over which minimization takes place.}
 
-\item{seal}{fatty acid signature of predator.}
+\item{predator}{fatty acid signature of predator.}
 
 \item{prey.quantiles}{matrix of fatty acid signatures of
 prey. Each row contains an individual prey signature from a different
@@ -18,6 +18,5 @@ species.}
 }
 \description{
 Used in \code{solnp()} as the objective function to be minimized when
-Kullback-Leibler distance measure is chosen.
+Kullback--Leibler distance measure is chosen.
 }
-
