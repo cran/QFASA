@@ -5,6 +5,16 @@ output:
 ---
 # News
 
+## QFASA 1.1.1
+
+* In DESCRIPTION, changed order of names and added Jennifer as an author. Also modified wording in description.
+* Added p.SMUFASA.
+* Changed prey.mat description in p.MUFASA.
+* Created Makefiles in folder src.
+* Fixed title of QFASA_Workflow_Example vignette.
+* Cleaned up MUFASA_Workflow_Example vignette.
+* Added SMUFASA_Workflow_Example vignette.
+
 ## QFASA 1.1.0
 
 * Made changes to DESCRIPTION including updating date, version, adding "cre" to Connie Stewart's role, removing "cre" from Justin Kamerman's role, adding Holly Steeves as an author, adding new imports and packages to LinkingTo. 
@@ -13,7 +23,7 @@ output:
 * * Vignettes: 
   + Changed name of modelling workflow vignette to "QFASA_Workflow_Example" and updated it.  
   + Added a comment to the Parallel_Execution_for_Confidence_Intervals vignette.  
-  + Added MUFASA_Worflow_Example vignette.
+  + Added MUFASA_Workflow_Example vignette.
 * beta.meths.CI is deprecated and replaced by conf.meth. Hid this function and bias.all from index. Made several corrections to conf.meth code.
 * prey.cluster was missing code.  Added example and default values.
 * Added functions to compute repeatability.
