@@ -12,7 +12,7 @@
 
 <meta name="author" content="Holly Steeves" />
 
-<meta name="date" content="2022-10-18" />
+<meta name="date" content="2023-11-15" />
 
 <title>MUFASA Workflow Example</title>
 
@@ -31,23 +31,23 @@ document.addEventListener('DOMContentLoaded', function(e) {
 </script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
 pre > code.sourceCode { white-space: pre; position: relative; }
@@ -65,55 +65,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -341,14 +340,14 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">MUFASA Workflow Example</h1>
 <h4 class="author">Holly Steeves</h4>
-<h4 class="date">2022-10-18</h4>
+<h4 class="date">2023-11-15</h4>
 
 
 
 <div id="load-package" class="section level1">
 <h1>Load Package</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(QFASA)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">library</span>(QFASA)</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -357,7 +356,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(compositions)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">library</span>(compositions)</span></code></pre></div>
 <pre><code>## Welcome to compositions, a package for compositional data analysis.
 ## Find an intro with &quot;? compositions&quot;</code></pre>
 <pre><code>## 
@@ -365,6 +364,9 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
 ## 
 ##     anova, cor, cov, dist, var</code></pre>
+<pre><code>## The following object is masked from &#39;package:graphics&#39;:
+## 
+##     segments</code></pre>
 <pre><code>## The following objects are masked from &#39;package:base&#39;:
 ## 
 ##     %*%, norm, scale, scale.default</code></pre>
@@ -392,8 +394,8 @@ multiple sets.</p></li>
 <li><p>Regardless of how you load the FA set, it must be converted to a
 vector.</p></li>
 </ul>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(FAset)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>fa.set <span class="ot">=</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(FAset))</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">data</span>(FAset)</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>fa.set <span class="ot">=</span> <span class="fu">as.vector</span>(<span class="fu">unlist</span>(FAset))</span></code></pre></div>
 </div>
 <div id="matrix-of-predator-fa-signatures" class="section level3">
 <h3>Matrix of Predator FA Signatures</h3>
@@ -416,10 +418,10 @@ predator.matrix (which is passed to p.MUFASA) and the tombstone data is
 retained so that it can be recombined with the model output later
 on.</p></li>
 </ul>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(predatorFAs)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>tombstone.info <span class="ot">=</span> predatorFAs[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>predator.matrix <span class="ot">=</span> predatorFAs[,<span class="dv">5</span><span class="sc">:</span>(<span class="fu">ncol</span>(predatorFAs))]</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>npredators <span class="ot">=</span> <span class="fu">nrow</span>(predator.matrix)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">data</span>(predatorFAs)</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>tombstone.info <span class="ot">=</span> predatorFAs[,<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>]</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>predator.matrix <span class="ot">=</span> predatorFAs[,<span class="dv">5</span><span class="sc">:</span>(<span class="fu">ncol</span>(predatorFAs))]</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>npredators <span class="ot">=</span> <span class="fu">nrow</span>(predator.matrix)</span></code></pre></div>
 </div>
 <div id="matrix-of-prey-fa-signatures" class="section level3">
 <h3>Matrix of Prey FA Signatures</h3>
@@ -431,14 +433,14 @@ of the prey and their lipid contents (where appropriate).</p></li>
 <li><p>If you want to only include a subset of prey species, you must
 extract it prior to input (see code below).</p></li>
 </ul>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(preyFAs)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>prey.matrix <span class="ot">=</span> preyFAs[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Selecting 5 prey species to include</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>spec.red <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;capelin&quot;</span>, <span class="st">&quot;herring&quot;</span>, <span class="st">&quot;mackerel&quot;</span>, <span class="st">&quot;pilchard&quot;</span>, <span class="st">&quot;sandlance&quot;</span>)</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>spec.red <span class="ot">&lt;-</span> <span class="fu">sort</span>(spec.red)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>prey.red <span class="ot">&lt;-</span> prey.matrix <span class="sc">%&gt;%</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Species <span class="sc">%in%</span> spec.red)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">data</span>(preyFAs)</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>prey.matrix <span class="ot">=</span> preyFAs[,<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>)]</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co"># Selecting 5 prey species to include</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>spec.red <span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">&quot;capelin&quot;</span>, <span class="st">&quot;herring&quot;</span>, <span class="st">&quot;mackerel&quot;</span>, <span class="st">&quot;pilchard&quot;</span>, <span class="st">&quot;sandlance&quot;</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>spec.red <span class="ot">&lt;-</span> <span class="fu">sort</span>(spec.red)</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>prey.red <span class="ot">&lt;-</span> prey.matrix <span class="sc">%&gt;%</span></span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>  <span class="fu">filter</span>(Species <span class="sc">%in%</span> spec.red)</span></code></pre></div>
 </div>
 <div id="prey-lipid-content-fat-content" class="section level3">
 <h3>Prey Lipid Content (Fat Content)</h3>
@@ -452,11 +454,11 @@ as the vector instead. I.e. FC - rep(1,nrow(prey.matrix)).</p></li>
 <li><p>If you’ve decided on a subset of species, you must extract them
 from the mean lipid content vector as well.</p></li>
 </ul>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>FC <span class="ot">=</span> preyFAs[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)] </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>FC <span class="ot">=</span> FC <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Species)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>FC.vec <span class="ot">=</span> <span class="fu">tapply</span>(FC<span class="sc">$</span>lipid,FC<span class="sc">$</span>Species,mean,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>FC.red <span class="ot">&lt;-</span> FC.vec[spec.red]</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a>FC <span class="ot">=</span> preyFAs[,<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)] </span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>FC <span class="ot">=</span> FC <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>  <span class="fu">arrange</span>(Species)</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>FC.vec <span class="ot">=</span> <span class="fu">tapply</span>(FC<span class="sc">$</span>lipid,FC<span class="sc">$</span>Species,mean,<span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a>FC.red <span class="ot">&lt;-</span> FC.vec[spec.red]</span></code></pre></div>
 </div>
 <div id="calibration-coefficients" class="section level3">
 <h3>Calibration Coefficients</h3>
@@ -468,15 +470,15 @@ FA (see example file “CC.csv”).</p></li>
 the FAs in the original predator.csv file and they must be in the EXACT
 SAME ORDER.</p></li>
 </ul>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(CC)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>cal.vec <span class="ot">=</span> CC[,<span class="dv">2</span>]</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>cal.m <span class="ot">=</span> <span class="fu">replicate</span>(npredators, cal.vec)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(cal.m) <span class="ot">&lt;-</span> CC<span class="sc">$</span>FA</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">data</span>(CC)</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>cal.vec <span class="ot">=</span> CC[,<span class="dv">2</span>]</span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>cal.m <span class="ot">=</span> <span class="fu">replicate</span>(npredators, cal.vec)</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="fu">rownames</span>(cal.m) <span class="ot">&lt;-</span> CC<span class="sc">$</span>FA</span></code></pre></div>
 </div>
 </div>
 <div id="running-mufasa" class="section level1">
 <h1>Running MUFASA</h1>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">p.MUFASA</span>(predator.matrix, prey.red, cal.m, FC.red, fa.set)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">p.MUFASA</span>(predator.matrix, prey.red, cal.m, FC.red, fa.set)</span></code></pre></div>
 <div id="p.mufasa-output" class="section level3">
 <h3>p.MUFASA Output</h3>
 <p>The MUFASA output is a list with 3 components:</p>
@@ -491,19 +493,19 @@ SAME ORDER.</p></li>
 the same order as the input file) by the species groups (by column, in
 the same order as the prey.red file). The estimates are expressed as a
 proportion (they will sum to 1).</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Diet_Estimates <span class="ot">&lt;-</span> M<span class="sc">$</span>Diet_Estimates</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>Diet_Estimates <span class="ot">&lt;-</span> M<span class="sc">$</span>Diet_Estimates</span></code></pre></div>
 </div>
 <div id="nll" class="section level4">
 <h4>nll</h4>
 <p>This is a vector of the negative log likelihood values at each
 iteration of the optimizer.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>nll <span class="ot">&lt;-</span> M<span class="sc">$</span>nll</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>nll <span class="ot">&lt;-</span> M<span class="sc">$</span>nll</span></code></pre></div>
 </div>
 <div id="var_epsilon" class="section level4">
 <h4>Var_Epsilon</h4>
 <p>This is the optimized diagonal values of the variance-covariance
 matrix of the errors. See reference in help file for details.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>VarEps <span class="ot">&lt;-</span> M<span class="sc">$</span>Var_Epsilon</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>VarEps <span class="ot">&lt;-</span> M<span class="sc">$</span>Var_Epsilon</span></code></pre></div>
 </div>
 </div>
 </div>

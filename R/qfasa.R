@@ -9,7 +9,7 @@
 #' lipid in many predators, led us to propose the use of quantitative
 #' fatty acid signature analysis (QFASA) to study predator diets.
 #'
-#' @docType package
+#' @aliases QFASA-package
 #' @name QFASA
 #'
 NULL
@@ -41,8 +41,8 @@ NULL
 #'          See Example for code that extracts a subset of FAs and then normalizes the prey database signatures.
 #'
 #' @return A list with components:
-#' \item{\strong{Diet Estimates}}{A matrix of the diet estimates for each predator where each row corresponds to a predator and the columns to prey species. The estimates are expressed as proportions summing to one.}
-#' \item{\strong{Additional Measures}}{For each predator for which a diet estimate was obtained:}
+#' \item{Diet Estimates}{A matrix of the diet estimates for each predator where each row corresponds to a predator and the columns to prey species. The estimates are expressed as proportions summing to one.}
+#' \item{Additional Measures}{For each predator for which a diet estimate was obtained:}
 #' \item{ModFAS}{the value of the modelled fatty acid. These are expressed as proportions summing to one.}
 #' \item{DistCont}{The contribution of each fatty acid to the final minimized distance.}
 #' \item{PropDistCont}{The contribution of each fatty acid to the final minimized distance as a proportion of the total.}
@@ -229,7 +229,7 @@ p.QFASA <- function(predator.mat,
 #' @references Connie Stewart (2017) An approach to measure distance between compositional diet estimates containing essential zeros, Journal of Applied Statistics, 44:7, 1137-1152, DOI: 10.1080/02664763.2016.1193846
 #'
 AIT.dist <- function(x.1, x.2) {
-    return(sqrt(sum((log(x.1/mean.geometric(x.1)) - log(x.2/mean.geometric(x.2)))^2.)))
+    return(sqrt(sum((log(x.1/mean_geometric(x.1)) - log(x.2/mean_geometric(x.2)))^2.)))
 }
 
 
@@ -257,7 +257,7 @@ AIT.more <- function(alpha, predator, prey.quantiles) {
     sealhat[sealhat > 0.] <- (1. - no.zero * 1e-05) * sealhat[sealhat > 0.]
 
     AIT.sq.vec <-
-        ( log(seal/mean.geometric(seal)) - log(sealhat/mean.geometric(sealhat)) )^2
+        ( log(seal/mean_geometric(seal)) - log(sealhat/mean_geometric(sealhat)) )^2
 
     dist <- (sum(AIT.sq.vec))^(1/2)
 
@@ -461,7 +461,7 @@ KL.obj <- function(alpha, predator, prey.quantiles) {
 #'
 #' @param x compositional vector
 #'
-mean.geometric <- function(x) {
+mean_geometric <- function(x) {
     D <- length(x)
     return(prod(x)^(1./D))
 }

@@ -5,6 +5,19 @@ output:
 ---
 # News
 
+## QFASA 1.2.0
+
+* Modified p.MLE to force prey species to be in alphabetical order. 
+* Modified pseudo.pred (example and parameter description) and pseudo.pred.norm
+(parameter description) to emphasize the proper order of the diet parameter.
+* Fixed recent CRAN issues based on Kurt Hornik's emails.
+* Added new functions for diet estimation based on forward selection and 
+backward elimination algorithms.
+* Changed split.prey, split.fatcont and mean.geometric to split_prey, 
+split_fatcont and mean_geometric
+
+
+
 ## QFASA 1.1.2
 
 * Added Tyler Rideout as a contributor.

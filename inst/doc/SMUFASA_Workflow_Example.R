@@ -51,7 +51,7 @@ FC.red <- FC.vec[spec.red]
 #              cal.mat=CalEst, dist.meas=2, gamma=1, FC=FC.red,
 #              start.val=rep(1,nrow(prey.red)), ext.fa=fa.set)
 
-## ---- eval=FALSE--------------------------------------------------------------
+## ----eval=FALSE---------------------------------------------------------------
 #  DietEst.Q <- Q$'Diet Estimates'
 
 ## ----eval=FALSE---------------------------------------------------------------

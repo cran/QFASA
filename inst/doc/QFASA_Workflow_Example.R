@@ -1,15 +1,15 @@
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 library(QFASA)
 library(plyr)
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 dist.meas=1
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 data(FAset)
 fa.set = as.vector(unlist(FAset))
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 data(predatorFAs)
 tombstone.info = predatorFAs[,1:4]
 predator.matrix = predatorFAs[,5:(ncol(predatorFAs))]
@@ -17,7 +17,7 @@ predator.matrix = predatorFAs[,5:(ncol(predatorFAs))]
 # number of predator FA signatures this is used to create the matrix of CC values (see section 6 below)
 npredators = nrow(predator.matrix)
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 #full file
 data(preyFAs)
 
@@ -36,27 +36,27 @@ prey.matrix=cbind(group,prey.sub)
 #create an average value for the FA signature for each designated modelling group
 prey.matrix=MEANmeth(prey.matrix) 
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 #numbers are the column which identifies the modelling group, and the column which contains the lipid contents
 FC = preyFAs[,c(2,3)] 
 FC = as.vector(tapply(FC$lipid,FC$Species,mean,na.rm=TRUE))
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 data(CC)
 cal.vec = CC[,2]
 cal.mat = replicate(npredators, cal.vec)
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 Q = p.QFASA(predator.matrix, prey.matrix, cal.mat, dist.meas, gamma=1, FC, start.val=rep(1,nrow(prey.matrix)), fa.set)
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 DietEst = Q$'Diet Estimates'
 
 #estimates changed from proportions to percentages
 DietEst = round(DietEst*100,digits=2)
 DietEst = cbind(tombstone.info,DietEst)
 
-## ---- eval=TRUE---------------------------------------------------------------
+## ----eval=TRUE----------------------------------------------------------------
 
 Add.meas = ldply(Q$'Additional Measures', data.frame)
 
